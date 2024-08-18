@@ -30,6 +30,7 @@ class AuthController extends Controller
     public function register(RegisterRequest $request){
         $data = $request->validated();
         User::create($data);
+        return response(null, 204);
     }
 
     public function logout(Request $request){
